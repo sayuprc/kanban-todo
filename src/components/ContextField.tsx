@@ -5,9 +5,8 @@ import {
   DraggableLocation,
   DropResult,
 } from 'react-beautiful-dnd';
-import { Task } from '../types/Type';
 import TaskCard from './TaskCard';
-import { saveTasks } from '../Task';
+import { Task, saveTasks } from '../Task';
 
 type ListProps = 'new' | 'working' | 'done';
 
@@ -15,9 +14,9 @@ export type ContextFieldProps = {
   newTasks: Task[];
   workingTasks: Task[];
   doneTasks: Task[];
-  setNewTasks: React.Dispatch<React.SetStateAction<Task[]>>;
-  setWorkingTasks: React.Dispatch<React.SetStateAction<Task[]>>;
-  setDoneTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+  setNewTasks: (tasks: Task[]) => void;
+  setWorkingTasks: (tasks: Task[]) => void;
+  setDoneTasks: (tasks: Task[]) => void;
 };
 
 const ContextField = ({

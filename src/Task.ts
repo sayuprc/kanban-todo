@@ -1,4 +1,8 @@
-import { Task } from './types/Type';
+export type Task = {
+  id: string;
+  content: string;
+  removed: boolean;
+};
 
 export const getTasks = (key: string): Task[] => {
   const newTasks = localStorage.getItem(key);
