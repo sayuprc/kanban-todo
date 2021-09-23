@@ -11,15 +11,14 @@ import {
 } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { Draggable, Droppable } from 'react-beautiful-dnd';
-import { Task } from '../types/Type';
-import { saveTasks } from '../Task';
+import { Task, saveTasks } from '../Task';
 import '../css/TaskCard.css';
 
 export type TaskCardProps = {
   droppableId: string;
   tasks: Task[];
   cardTitle: string;
-  setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+  setTasks: (tasks: Task[]) => void;
 };
 
 const TaskCard = ({
