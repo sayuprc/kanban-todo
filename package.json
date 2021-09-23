@@ -1,0 +1,60 @@
+{
+  "name": "kanban_todo",
+  "version": "1.0.0",
+  "main": "build/electron/main.js",
+  "homepage": "./",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^16.9.6",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start:web": "react-scripts start",
+    "build:web": "npx cross-env BUILD_PATH=build/electron/renderer react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build:ts": "npx tsc --outDir build/electron electron/main.ts",
+    "start:electron": "npx cross-env NODE_ENV=develop electron .",
+    "build:electron": "node scripts/build-win.js",
+    "build:all": "yarn build:web && yarn build:ts && yarn build:electron"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@types/electron": "^1.6.10",
+    "@types/electron-builder": "^2.8.0",
+    "@types/react-beautiful-dnd": "^13.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^15.0.0",
+    "electron-builder": "^22.11.7",
+    "react-beautiful-dnd": "^13.1.0"
+  }
+}

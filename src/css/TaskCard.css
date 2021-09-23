@@ -1,0 +1,12 @@
+.card {
+  background: #f6f8fa;
+}
+
+.card-list {
+  background: #fff;
+  margin: 5px 0 10px 0;
+}
+
+.card-list::hover {
+  cursor: pointer;
+}
