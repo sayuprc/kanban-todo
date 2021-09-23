@@ -1,6 +1,6 @@
 {
   "name": "kanban_todo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "build/electron/main.js",
   "homepage": "./",
   "private": true,
