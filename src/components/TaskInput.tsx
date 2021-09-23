@@ -1,9 +1,15 @@
 import React from 'react';
 import { IconButton, TextField, Tooltip } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
-import { Task, TaskInputProps } from '../types/Type';
-import { saveTasks } from '../Task';
+import { Task, saveTasks } from '../Task';
 import '../css/TaskInput.css';
+
+export type TaskInputProps = {
+  tasks: Task[];
+  content: string;
+  setTasks: (tasks: Task[]) => void;
+  setContent: (value: string) => void;
+};
 
 const TaskInput = ({
   tasks,
