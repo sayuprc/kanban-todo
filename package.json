@@ -53,7 +53,7 @@
     "@types/electron-builder": "^2.8.0",
     "@types/react-beautiful-dnd": "^13.1.2",
     "cross-env": "^7.0.3",
-    "electron": "^19.0.8",
+    "electron": "^22.3.25",
     "electron-builder": "^23.1.0",
     "react-beautiful-dnd": "^13.1.0"
   }
